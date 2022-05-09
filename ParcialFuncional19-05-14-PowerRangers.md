@@ -36,7 +36,7 @@ Genera a un equipo conjason convertido en *ranger* rojo, ykimberlyconvertida en 
 
 **7b** Usando alfa5, si fuera posible, dar un ejemplo de aplicacion de una función de las definidas anteriormente que termine y otra que no.
 
-**8** Existe otro escuadrón que combate contra el mal: las chicas superpoderosas, de las que sabemos su color y cantidad de pelo. 
+**8.** Existe otro escuadrón que combate contra el mal: las chicas superpoderosas, de las que sabemos su color y cantidad de pelo. 
 
 Al igual que los Power Rangers, su lider es la roja, o la cabeza del equipo sin repetir lógica respecto del código ya desarrollado.
 
