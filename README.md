@@ -2,6 +2,9 @@
 
 Es el año 1994, y la ciudad de Tokio1 el estado de California se ve amenazado por brujas y monstruos que crecen de tamaño. La solución al problema es obvia: necesitamos de un escuadrón de jóvenes multicolores que comanden robots gigantes.
 
+![1366_2000](https://user-images.githubusercontent.com/54424951/167341493-4d59472c-97b9-4002-a79d-8f066b1ed3bd.jpg)
+
+
   **1.a. Tenemos personas, de las que se conocen sus habilidades (strings) y si son buenas o no. Dar un sinónimo de tipo y una constante de ejemplo.
 
 1. b. Tenemos tambien Power Rangers, de los que conocemos su color, sus habilidades y su nivel de pelea. Nuevamente, dar un sinónimo de tipo y una constante de ejemplo.
