@@ -5,7 +5,7 @@ Es el año 1994, y la ciudad de Tokio1 el estado de California se ve amenazado p
 ![1366_2000](https://user-images.githubusercontent.com/54424951/167341493-4d59472c-97b9-4002-a79d-8f066b1ed3bd.jpg)
 
 
-### Es el año 1994, y la ciudad de Tokio[^1] el estado de California se ve amenazado por brujas y monstruos que crecen de tamaño. La solución al problema es obvia: necesitamos de un escuadrón de jóvenes multicolores que comanden robots gigantes. 
+### Es el año 1994, y la ciudad de Tokio[1] el estado de California se ve amenazado por brujas y monstruos que crecen de tamaño. La solución al problema es obvia: necesitamos de un escuadrón de jóvenes multicolores que comanden robots gigantes. 
 
 **1.a** Tenemos personas, de las que se conocen sus habilidades (strings) y si son buenas o no. Dar un sinónimo de tipo y una constante de ejemplo.
 
@@ -13,7 +13,7 @@ Es el año 1994, y la ciudad de Tokio1 el estado de California se ve amenazado p
 
 **2. convertirEnPowerRanger** dado un color y una persona, convierte a la persona en un *ranger* de ese color.
 
-Al hacer esto, le traspasa todas sus habilidades originales, potenciadas (por ejemplo: si su habilidad era “bailar”, ahora es ”superBailar”[^2]), y le da tanto nivel de pelea como la cantidad de letras de todas sus habilidades originales
+Al hacer esto, le traspasa todas sus habilidades originales, potenciadas (por ejemplo: si su habilidad era “bailar”, ahora es ”superBailar”[2]), y le da tanto nivel de pelea como la cantidad de letras de todas sus habilidades originales
 
 **3. formarEquipoRanger**: dada una lista de colores y una lista de personas, genera un equipo (una lista de Power Rangers) de los colores dados.
 
