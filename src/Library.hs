@@ -73,6 +73,7 @@ convertirEnPowerRanger color persona = (color, potenciarHabilidades persona , da
 
 -- 3. formarEquipoRanger: dada una lista de colores y una lista de personas, genera un 
 -- equipo (una lista de Power Rangers) de los colores dados.
+
 coloresLista = [Rojo,Rosa,Azul]
 personasLista :: [Persona]
 personasLista = [jason,skull,kimberly,bulk]
@@ -154,21 +155,39 @@ tieneMasDe5Habilidades  = (> 5). length
 -- superpoderosas, de las que sabemos su color y cantidad de 
 -- pelo. 
 
-type CantidadDePelo = Number
-type ChicaSuperpoderosa = (Color,CantidadDePelo)
-
-chicaLider equipoDeChicas = 
-
-
--- rangerLider ::  [PowerRanger] -> PowerRanger
--- rangerLider equipoRanger = findOrElse buscarAlRangerRojo (head equipoRanger) equipoRanger
-
--- buscarAlRangerRojo :: PowerRanger -> Bool
--- buscarAlRangerRojo (color,_,_) = color == Rojo
-
 
 -- Al igual que los Power Rangers, su lider es la roja, o la 
 -- cabeza del equipo. Desarrollar la función chicaLider, sin 
 -- repetir lógica respecto del código ya desarrollado.  
 -- Si fuera necesario modificar funciones ya desarrolladas, 
 -- escribir sus nuevas versiones.
+
+type CantidadDePelo = Number
+type ChicaSuperpoderosa = (Color,CantidadDePelo)
+
+mojojo :: ChicaSuperpoderosa
+mojojo = (Negro, 100)
+
+bellota :: ChicaSuperpoderosa
+bellota = (Verde, 10)
+
+bombon :: ChicaSuperpoderosa
+bombon = (Amarillo,5)
+
+burbuja :: ChicaSuperpoderosa
+burbuja = (Rojo,30)
+
+escuadronSuperPoderoso :: [ChicaSuperpoderosa]
+escuadronSuperPoderoso = [bellota,bombon,burbuja]
+
+-- chicaLider :: 
+chicaLider :: [ChicaSuperpoderosa] -> ChicaSuperpoderosa
+chicaLider equipoDeChicas = findOrElse buscarAlaChicaRoja (head equipoDeChicas) equipoDeChicas
+
+
+-- rangerLider ::  [PowerRanger] -> PowerRanger
+-- rangerLider equipoRanger = findOrElse buscarAlRangerRojo (head equipoRanger) equipoRanger
+
+buscarAlaChicaRoja :: ChicaSuperpoderosa -> Bool
+buscarAlaChicaRoja (color,_ ) = color == Rojo
+
