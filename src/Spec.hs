@@ -8,7 +8,9 @@ correrTests = hspec $ do
   suiteDeTestsDeParte1
   suiteDeTestsDeParte2
   suiteDeTestsDeParte4
-  -- suiteDeTestsDeParte5
+  suiteDeTestsDeParte5
+  suiteDeTestsDeParte6
+  suiteDeTestsDeParte8
 suiteDeTestsDeParte1 = describe "Parte 1: Personas y PowerRangers" $ do
     let tomy = (["Galan","Poderoso"], True )
     let tomyMalo = (["Galan","Poderoso"], False )
@@ -32,7 +34,7 @@ suiteDeTestsDeParte2 = describe "Parte 2: de Persona a Ranger " $ do
       it "Dada una lista de habilidades las puedo potenciar  " $ do
         potenciarHabilidades jony  `shouldBe` ["SuperEspiritu libre","SuperVago"]
         potenciarHabilidades casuality `shouldBe` []
-      it "Dar nivel de pelea" $ do
+      it "Dada una personsa le doy un nivel de pelea acorde a la cantidad de letras de sus habilidades " $ do
         darNivelDePelea jony `shouldBe` 18
         darNivelDePelea casuality `shouldBe` 0
 
@@ -51,4 +53,39 @@ suiteDeTestsDeParte4 = describe "Parte 4: Buscando al lider " $ do
         rangerLider listaDeRangers  `shouldBe` (Rojo,["Horrible","Necio"],10)
       it "Dada una lista de Rangers que NO tiene en su equipo al Ranger Rojo entonces  el lider será el primero de la lista , en este caso el Amarillo" $ do
         rangerLider listaDeRangers2 `shouldBe` (Amarillo,["Horrible","Necio"],10)
+
+suiteDeTestsDeParte5 = describe "Parte 5: El mejor " $ do
+    describe "findOrElse" $ do
+      it " dada una lista, y una función que tome un elemento y devuelva un valor ordenable, encuentra el máximo de la misma." $ do
+        maximumBy (>1) [1,2,3,4,5,6] `shouldBe` True
+        maximumBy (max 1) [1,2,3,4,5,6] `shouldBe` 6
+
+suiteDeTestsDeParte6 = describe "Parte 6: El habilidoso " $ do
+    let elHabilidoso = (Verde, ["Galan","Poderoso","Confiable","Habil","Metodico","Nocturno"], 10 )
+    let elNoHabilidoso = (Amarillo, ["Galan","Poderoso","Confiable"], 20 )
+    
+    describe "Habilidades de un Ranger" $ do
+      it "Dado un Ranger retorno su lista de habilidades " $ do
+        habilidadesRanger elHabilidoso `shouldBe` ["Galan","Poderoso","Confiable","Habil","Metodico","Nocturno"]
+    describe "Es un Ranger Habilidoso" $ do
+      it "Dado un Ranger es habilidoso si tiene mas de 5 habilidades  " $ do
+        rangerHabilidoso elHabilidoso `shouldBe` True
+      it "Dado un Ranger que no tiene mas de 5 habilidades entonces no es habilidoso  " $ do
+        rangerHabilidoso elNoHabilidoso `shouldBe` False
+
+suiteDeTestsDeParte8 = describe "Parte 8: Chicas Superpoderosas" $ do
+    let escuadronSuperPoderoso = [bellota,bombon,burbuja]
+    let escuadronMedioPelo = [mojojo,bellota,bombon,mojojo]
+
+    let bellota = (Verde, 10)
+    let bombon = (Amarillo,5)
+    let burbuja = (Rojo,30)
+    let mojojo = (Negro, 100)
+
+    describe "chicaLider" $ do
+      it "Dado un escuadron de chicas superpoderosas que tiene en su equipo a la chica Roja entonces su lider sera ella " $ do
+        chicaLider escuadronSuperPoderoso `shouldBe` burbuja
+      it "Dado un escuadron de chicas superpoderosas que NO tiene en su equipo a la chica Roja entonces su lider sera la cabeza del equipo " $ do
+        chicaLider escuadronMedioPelo `shouldBe` mojojo
+        
 
